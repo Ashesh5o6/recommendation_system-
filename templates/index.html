@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Scholarship Firm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>National Scholarship Firm</h1>
+        </header>
+        <section id="education">
+            <h2>Why Scholarships Matter in Education</h2>
+            <p>
+                Scholarships play a crucial role in providing financial assistance to students, enabling them to pursue their educational goals without the burden of excessive debt. They promote equal access to education and reward academic excellence, talent, and diversity.
+            </p>
+            <p>
+                Explore available scholarships below and find opportunities that match your qualifications and aspirations.
+            </p>
+        </section>
+        <main>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter age...">
+                </div>
+                <div class="form-group">
+                    <label for="socialCategory">Social Category:</label>
+                    <select id="socialCategory" name="socialCategory">
+                        <option value="">Select</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                        <option value="OTHERS">OTHERS</option>
+                        <option value="MINORITY">MINORITY</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="T">Transgender</option>
+                    </select>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+            <section id="results"></section>
+            <div id="pagination" class="pagination"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 National Scholarship Firm. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
